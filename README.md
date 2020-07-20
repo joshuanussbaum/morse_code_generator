@@ -1,4 +1,4 @@
-#morse code generator  
+# morse code generator  
 ## a morse code generator built into chuck!  
 
 HOW TO USE:  
