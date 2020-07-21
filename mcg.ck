@@ -2,8 +2,8 @@ Dictionary dict;
 MorseBeep ditdah;
 dac => WvOut w => blackhole;
 w.wavFilename("hello_morse");
-"Hello, World!" => string test;
-test.upper() => string test2;
+"Hello, World!" => string to_morse;
+to_morse.upper() => to_morse;
 
 for(0 => int i; i < test2.length(); i++)
 {
