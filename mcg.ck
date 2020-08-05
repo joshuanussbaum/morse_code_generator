@@ -1,47 +1,64 @@
 Dictionary dict;
 MorseBeep ditdah;
+UserInput entry;
 dac => WvOut w => blackhole;
-w.wavFilename("hello_morse");
-"Hello, World!" => string to_morse;
-to_morse.upper() => to_morse;
-
-for(0 => int i; i < test2.length(); i++)
+<<<"Please Name Your File: \n">>>;
+entry.enterText() => string fileName;
+<<<"Please Enter Your Message: \n">>>;
+entry.enterText() => string toMorse;
+toMorse.upper() => toMorse;
+w.wavFilename(fileName);
+if(dict.isInDictionary(toMorse))
 {
-	dict.translateLetters(test2.substring(i,1)) => string morse;
-	<<<morse>>>;
-	if(morse == "S")
+	for(0 => int i; i < toMorse.length(); i++)
 	{
-		ditdah.spaceBar();
-		continue;
-	}
-	else if(morse.length() == 1)
-	{
-		if(morse == ".")
+		dict.translateLetters(toMorse.substring(i,1)) => string morse;
+		<<<morse>>>;
+		if(morse == "_")
 		{
-			ditdah.playDit();
+			ditdah.spaceBar();
+			continue;
 		}
-		else
+		else if(morse.length() == 1)
 		{
-			ditdah.playDah();
-		}
-		ditdah.morseSpace();
-	}
-	else
-	{
-		for(0 => int i; i < morse.length(); i++)
-		{
-			if(morse.substring(i,1) == ".")
+			if(morse == ".")
 			{
 				ditdah.playDit();
 			}
-			else if(morse.substring(i,1) == "-")
+			else
 			{
 				ditdah.playDah();
-			} 
+			}
 			ditdah.morseSpace();
 		}
+		else
+		{
+			for(0 => int i; i < morse.length(); i++)
+			{
+				if(morse.substring(i,1) == ".")
+				{
+					ditdah.playDit();
+				}
+				else if(morse.substring(i,1) == "-")
+				{
+					ditdah.playDah();
+				} 
+				ditdah.morseSpace();
+			}
+		}
+		ditdah.characterSpace();
 	}
-	ditdah.characterSpace();
+	w.closeFile();
+	1::ms => now;
 }
-w.closeFile();
-1::ms => now;
+else
+{
+	<<<"Invalid entry! Please try again.">>>;
+	1::ms => now;
+}
+
+/*
+w.wavFilename("hello_morse");
+"Hello, World!" => string toMorse;
+toMorse.upper() => toMorse;
+*/

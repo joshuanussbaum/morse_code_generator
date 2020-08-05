@@ -7,6 +7,9 @@ public class MorseBeep
 	(dah * 2) + dit => dur space;
 	0.0 => float silence;
 	0.5 => float play;
+	silence => s.gain;
+
+	// TODO - IMPLEMENT FARNSWORTH TIMING
 
 	// Write function for "Play Dit"
 	fun void playDit()
