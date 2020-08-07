@@ -1,4 +1,4 @@
-# morse code generator  v 0.0.3
+# morse code generator  v 0.0.4
 ## a morse code generator built into chuck!  
 
 HOW TO USE:  
@@ -18,7 +18,7 @@ HOPEFUL FEATURES:
 * reverse translation - feed this program audio of a morse code signal and it will return a translated string of text  
 * web-application version  
 * multiple language support  
-* farnsworth timing for novices  
+* farnsworth timing for novices [SEMI-IMPLEMENTED in v 0.0.4]  
 
 
 TODO:  

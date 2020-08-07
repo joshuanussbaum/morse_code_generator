@@ -6,6 +6,14 @@ dac => WvOut w => blackhole;
 entry.enterText() => string fileName;
 <<<"Please Enter Your Message: \n">>>;
 entry.enterText() => string toMorse;
+<<<"Farnsworth On? Y/N: \n">>>;
+entry.enterText() => string farnsworth;
+0 => int farnResult;
+if(farnsworth == "Y" || farnsworth == "y")
+{
+	1 => farnResult;
+}
+ditdah.farnsworthTiming(farnResult);
 toMorse.upper() => toMorse;
 w.wavFilename(fileName);
 if(dict.isInDictionary(toMorse))

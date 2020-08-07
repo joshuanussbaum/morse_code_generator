@@ -1,0 +1,78 @@
+2 Dimensional Array - 
+ 1. Letter, Digit, Punctuation marks
+ 2. Morse Code (shorthand to . and -)
+
+Take string input
+Iterate through each character, search through dictionary, 
+convert into dot notation. if character is not found, treat
+as a space.then, iterate through new dot notation.
+play short beeps if a . 
+long beeps if a -
+silence of . between each morse character
+silence of - between each letter/symbol
+silence of --. for each space
+
+550 Hz Sine Wave
+60 ms for dit (.)
+3 dits for 1 dah (-). aka 180 ms
+
+58 CHARCTERS TOTAL: CAN WE OPTIMIZE SEARCH -> PLAYBACK?
+A = .-
+B = -...
+C = -.-.
+D = -..
+E = .
+F = ..-.
+G = --.
+H = ....
+I = ..
+J = .---
+K = -.-
+L = .-..
+M = --
+N = -.
+O = ---
+P = .--. 
+Q = --.-
+R = .-.
+S = ...
+T = -
+U = ..-
+V = ...-
+W = .--
+X = -..-
+Y = -.--
+Z = --..
+0 = -----
+1 = .----
+2 = ..---
+3 = ...--
+4 = ....-
+5 = .....
+6 = -....
+7 = --...
+8 = ---..
+9 = ----.
+& = .-...
+' = .----.
+@ = .--.-.
+( = -.--.-
+) = -.--.
+: = ---...
+, = --..--
+= =  -...-
+! = -.-.--
+. = .-.-.-
+- = -....-
++ = .-.-.
+" = .-..-.
+? = ..--..
+/ = -..-.
+ä = .-.-
+á = .--.-
+å = .--.-
+Ch = ----
+é = ..-..
+ñ = --.--
+ö = ---.
+ü = ..--
