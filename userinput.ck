@@ -39,7 +39,7 @@ public class UserInput
 				}
 			}
 		}
-		<<<result>>>;
+		//<<<result>>>;
 		return result;
 	}
 }

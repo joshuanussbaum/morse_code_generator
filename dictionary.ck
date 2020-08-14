@@ -31,7 +31,7 @@ public class Dictionary
 		0 => int failCount;
 		for(0 => int i; i < entry.length(); i++)
 		{
-			<<<dictionary[entry.substring(i,1)]>>>;
+			//<<<dictionary[entry.substring(i,1)]>>>;
 			if(dictionary[entry.substring(i,1)] == null)
 			{
 				1 +=> failCount;
