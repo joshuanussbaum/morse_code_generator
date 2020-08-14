@@ -48,7 +48,7 @@ public class MorseBeep
 		}
 		else
 		{
-			dit => now;
+			dah => now;
 		}
 	}
 	// Write funciton for "Play Space Character"
